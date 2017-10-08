@@ -100,4 +100,11 @@ class UserController extends Controller
     {
         //
     }
+
+    public function renderUser($uuid)
+    {
+        $user = User::where('url', $uuid)->get()->first();
+
+        return view('welcome', ['user' => $user]);
+    }
 }

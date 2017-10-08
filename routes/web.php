@@ -21,3 +21,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::put('/members', "UserController@store");
+Route::get('/{id}', 'UserController@renderUser');
